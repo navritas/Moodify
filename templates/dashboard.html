@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard-container">
+    <header class="dashboard-header">
+        <h1>Moodify for Spotify</h1>
+        <div class="user-info" id="user-info">
+            
+        </div>
+    </header>
+    
+    <div class="loading-container" id="loading-container">
+        <h2 id="progress-message">Loading your Spotify data...</h2>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p id="progress-percentage">0% complete</p>
+    </div>
+    
+    <div class="content-container" id="content-container" style="display: none;">
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Liked Songs</h3>
+                <p id="liked-songs-count">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Auto-Playlists</h3>
+                <p id="playlists-count">0</p>
+            </div>
+        </div>
+        
+        <h2>Your Auto-Generated Playlists</h2>
+        <div class="playlists-grid" id="playlists-grid">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="login-container">
+    <div class="clouds">
+        <img src="{{ url_for('static', filename='cloud.png') }}" class="cloud-icon left-cloud" alt="Cloud Icon">
+        <img src="{{ url_for('static', filename='cloud.png') }}" class="cloud-icon right-cloud" alt="Cloud Icon">
+    </div>
+    <h1>Moodify for Spotify 🎶</h1>
+    <p class="description">
+        Automatically organize your Spotify favorites into curated playlists by genre and mood-perfect for every vibe!
+    </p>
+    <a href="{{ url_for('login') }}" class="login-btn">🎧 Login with Spotify</a>
+
+    <img src="{{ url_for('static', filename='spotify code.png') }}" 
+     alt="Spotify Code" 
+     class="spotify-code">
+
+    
+</div>
+{% endblock %}
